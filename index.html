@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation BD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: '#000000',
+              },
+              font : {
+                Batang : 'Gowun Batang',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    <!-- nav bar section  -->
+     <header class="bg-slate-100">  
+        <nav class="flex w-11/12 mx-auto pt-10 pb-20 justify-between">
+            <button class="btn bg-primary text-white text-lg font-bold px-8"><a href="blog.html">Blog</a></button>
+            <div class="flex gap-3 items-center">
+                <img src="./assets/logo.png" alt="">
+                <h3 class="text-2xl font-bold">Donate Bangladesh</h3>
+            </div>
+            <div class="flex gap-2 items-center">
+                <img src="./assets/coin.png" alt="">
+                <p class="text-xl font-semibold"><span>5500</span> BDT</p>
+            </div>            
+
+        </nav>
+
+
+
+     </header>
+
+
+    
+    <script src="./app.js"></script>
+</body>
+</html>
