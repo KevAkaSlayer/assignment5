@@ -2,7 +2,8 @@ function getAmount(id){
     const amount = parseInt(document.getElementById(id).value);
     if(isNaN(amount) || amount < 0){
         alert('Please enter a valid amount');
-        return 0;
+        document.getElementById('inputN').value = '';
+        return;
     }
     else return amount;
 }
@@ -24,6 +25,31 @@ function orgName(id){
 
 const select = document.getElementById('history');
 
+// const inputNoa = document.getElementById('inputN');
+// const inputFeni = document.getElementById('inputF');
+// const inputPro = document.getElementById('inputP');
+// inputNoa.addEventListener('input', function(e){
+//     const inputVal = e.target.value;
+
+//     if(inputVal.length >= 1){
+//         document.getElementById('NBtn').removeAttribute('disabled');
+//     }
+// });
+
+// inputFeni.addEventListener('input', function(e){
+//     const inputVal = e.target.value;
+
+//     if(inputVal.length >= 1){
+//         document.getElementById('FBtn').removeAttribute('disabled');
+//     }
+// });
+// inputPro.addEventListener('input', function(e){
+//     const inputVal = e.target.value;
+
+//     if(inputVal.length >= 1){
+//         document.getElementById('PBtn').removeAttribute('disabled');
+//     }
+// });
 
 
 
@@ -44,7 +70,7 @@ document.getElementById('NBtn').addEventListener('click', function(){
                         <h3 class="text-xl font-bold md:text-3xl">${noaAmount} Taka is Donated in "${name}"</h3>
                         <p class="text-md">Date : ${Date()}</p>
                     </div>`
-
+        document.getElementById('my_modal_1').classList.remove('hidden');
    }
    else{
          alert('Please add money to your account');
