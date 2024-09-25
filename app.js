@@ -24,8 +24,14 @@ function orgName(id){
 
 const select = document.getElementById('history');
 
+
+
+
+
+
 document.getElementById('NBtn').addEventListener('click', function(){
    if(totalAmount() > 0 && totalAmount() >= getAmount('inputN')){
+    
         const noaAmount = getAmount('inputN');
         const noaTotal = showAmount('nCash');
         const noaTotalAmount = noaAmount + noaTotal;
@@ -34,11 +40,11 @@ document.getElementById('NBtn').addEventListener('click', function(){
         document.getElementById('credit').innerText = total;
         document.getElementById('inputN').value = '';
         const name = orgName('noakhali');
-        select.innerHTML = `<div class="border border-green-100 rounded-lg flex flex-col p-5 gap-3">
-                        <h3 class="font-bold text-3xl">${noaAmount} Taka is Donated in "${name}"</h3>
+        select.innerHTML += `<div class="border border-green-100 rounded-lg flex flex-col p-5 gap-3">
+                        <h3 class="text-xl font-bold md:text-3xl">${noaAmount} Taka is Donated in "${name}"</h3>
                         <p class="text-md">Date : ${Date()}</p>
                     </div>`
-        
+
    }
    else{
          alert('Please add money to your account');
@@ -57,7 +63,7 @@ document.getElementById('FBtn').addEventListener('click', function(){
          document.getElementById('credit').innerText = total;
          document.getElementById('inputF').value = '';
          const name = orgName('feni');
-         select.innerHTML = `<div class="border border-green-100 rounded-lg flex flex-col p-5 gap-3">
+         select.innerHTML += `<div class="border border-green-100 rounded-lg flex flex-col p-5 gap-3">
                          <h3 class="font-bold text-3xl">${feniAmount} Taka is Donated in "${name}"</h3>
                          <p class="text-md">Date : ${Date()}</p>
                      </div>`
@@ -82,7 +88,7 @@ document.getElementById('FBtn').addEventListener('click', function(){
          document.getElementById('credit').innerText = total;
          document.getElementById('inputP').value = '';
          const name = orgName('protest');
-         select.innerHTML = `<div class="border border-green-100 rounded-lg flex flex-col p-5 gap-3">
+         select.innerHTML += `<div class="border border-grey-100 rounded-lg flex flex-col p-5 gap-3">
                          <h3 class="font-bold text-3xl">${proAmount} Taka is Donated in "${name}"</h3>
                          <p class="text-md">Date : ${Date()}</p>
                      </div>`
